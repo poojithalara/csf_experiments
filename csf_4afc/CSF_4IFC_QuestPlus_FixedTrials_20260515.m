@@ -336,11 +336,11 @@ try
     slopePriorMu = 3.5;
     slopePriorSD = 1.0;
 
-    contrastDomainLog  = linspace(-80, 0, 1000);
+    contrastDomainLog  = linspace(-80, 0, 1000); %% 0.01% to 100% 
     thresholdGridFull  = linspace(-80, 0, 500);
     thresholdPriorSD   = 20;
 
-    % Location-dependent prior: threshold (linear contrast) = intercept + slope * eccentricity_deg
+    % Location-dependent prior: threshold (linear contrast) = intercept + slope * eccentricity_deg # from rovamo and virsu contrast sensitivity data
     % 0.3 cpd: intercept=0.2101, slope=-0.0074
     % 3.0 cpd: intercept=0.0200, slope= 0.0021
     if Gabor.SFcpd <= 0.31
